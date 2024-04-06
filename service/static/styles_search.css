@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+a:active {
+    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-card {
+    width: calc(33.333% - 20px);
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    height: 200px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+}
+
+.book-details {
+    padding: 20px;
+}
+
+.book-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.book-author,
+.book-genre {
+    margin-bottom: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+.book-body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+

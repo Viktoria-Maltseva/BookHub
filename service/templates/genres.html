@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/static/author_styles.css"> 
+{% extends "base.html" %} 
+{% block content %} 
+<div class="container">
+    <h1>Информация о жанрах</h1>
+    <div class="author-info">
+        <p class="author-name">{{genre.genre}}</p>
+        <p>{{genre.body}}</p>
+    </div>
+    {% if genre.book_set.all %}
+    <h2>Произведения</h2>
+    <ul class="book-list">
+        {% for i in genre.book_set.all %}
+        <li><a href="{% url 'show_book' i.id %}">{{i.name}}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %} 
+

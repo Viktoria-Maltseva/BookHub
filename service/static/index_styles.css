@@ -1,0 +1,102 @@
+.search-input {
+    width: 1000px;
+    height: 30px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #1f00d0;
+}
+
+
+
+.author-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Увеличиваем ширину карточки */
+    margin: 20px;
+    display: inline-block; 
+}
+
+.author-card img {
+    width: 150px; /* Устанавливаем ширину фотографии */
+    height: 150px; /* Устанавливаем высоту фотографии */
+    object-fit: cover; /* Устанавливаем свойство, чтобы фотография полностью заполняла заданные размеры */
+    border-radius: 50%; /* Добавляем скругление углов, чтобы получить круглое изображение */
+}
+
+.author-name {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.author-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.author-button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 15%;
+    margin-top: 20px;
+    border-collapse: separate;
+    font-style: italic;
+    color: rgb(116, 116, 116);
+    font-size: 25px;
+}
+
+.i {
+    text-decoration: none;
+    color: rgb(116, 116, 116);
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+.color1 {
+    background: linear-gradient(45deg, rgb(147, 249, 253), rgb(224, 248, 249));
+}
+.content-container {
+    display: flex;
+}
+
+.author-list {
+    flex: 1;
+}
+
+.genre-table {
+    width: 15%; /* Устанавливаем ширину таблицы */
+    margin-left: 10px; /* Отступ слева от карточек авторов */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+a:active {
+    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+}

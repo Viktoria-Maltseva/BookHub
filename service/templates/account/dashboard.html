@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/static/dashboard_styles.css"> 
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать в профиль, {{request.user.first_name}}</h1>
+    {% for i in comments %}
+    <p>{{i.title}}</p>
+    {% endfor %}
+
+{% endblock %}

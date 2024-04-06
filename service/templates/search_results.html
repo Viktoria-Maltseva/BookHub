@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="/static/styles_search.css">
+{% extends "base.html" %} 
+{% block content %} 
+<body>
+    <div class="container">
+        <h1>Результат поиска: "{{ query }}"</h1>
+        <div class="book-list">
+            {% for book in books %}
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="" alt="Book Cover">
+                </div>
+                <div class="book-details">
+                    <a href="{% url 'show_book' book.id %}">
+                    <h2 class="book-title">{{ book.name }}</h2>
+                    <p class="book-author">Автор: {{ book.author.name }}</p>
+                    <p class="book-genre">Жанр: {{ book.genre.genre }}</p>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %} 

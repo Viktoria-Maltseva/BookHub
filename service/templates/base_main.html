@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/static/index_styles.css"> 
+{% extends "base.html" %} 
+{% block content %} 
+<form action="/books" method="get"> 
+    <input type="search" class="search-input" placeholder="Search..." required name="term">
+</form>
+<div class="content-container">
+    <div class="author-list">
+        {% for i in authors %}
+            <div class="author-card">
+                <img src="{{ i.photo }}" alt="{{ i.name }}">
+                <p class="author-name">{{ i.name }}</p>
+                <a href="{% url 'author_show' i.id %}" class="author-button">Подробнее</a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="genre-table">
+        <table> 
+            {% for i in genres%}
+            <tr> 
+                <td class="color1" style="width: 10px; height: 20px;"><a href="{% url 'genre_show' i.id %}">{{i.genre}}</a></td> 
+            </tr> 
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %} 
+

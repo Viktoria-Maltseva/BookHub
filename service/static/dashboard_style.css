@@ -1,0 +1,12 @@
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+a:active {
+    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+}
