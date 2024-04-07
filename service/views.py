@@ -12,7 +12,7 @@ from django.shortcuts import get_object_or_404
 def index(request):
     authors = Author.objects.all()
     genres = Genre.objects.all().order_by('genre')
-    return render(request, 'base_main.html', {'authors': authors, 'genres': genres})
+    return render(request, 'index.html', {'authors': authors, 'genres': genres})
 
 
 @require_http_methods(['GET', 'POST'])
