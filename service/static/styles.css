@@ -5,7 +5,6 @@
     background: linear-gradient(135deg, #acffee, #8be0f3, #6de4ff, #9479ff, #6a4ce2, #1b2bdb, #6a4ce2, #9479ff, #6de4ff, #8be0f3, #acffee);
 }
 
-/* Стили для кнопок */
 .button {
     border: none;
     border-radius: 5px;
@@ -14,19 +13,17 @@
     font-size: 16px;
 }
 
-/* Стили для кнопки "Login" */
 .button.login {
-    background-color: #4CAF50; /* Зеленый цвет */
+    background-color: #4CAF50;
     color: white;
 }
 
-/* Стили для кнопки "Logout" */
 .button.logout {
-    background-color: #f44336; /* Красный цвет */
+    background-color: #f44336;
     color: white;
 }
 
-/* Стили при наведении на кнопки */
+
 .button:hover {
     opacity: 0.8;
 }

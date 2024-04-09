@@ -1,0 +1,32 @@
+.comment {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment h2 {
+    margin-top: 0;
+}
+
+.comment p {
+    margin-bottom: 0;
+}
+
+.comment a {
+    margin-right: 10px;
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+a:active {
+    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+}
+
+

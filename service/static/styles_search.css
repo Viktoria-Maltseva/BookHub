@@ -6,16 +6,16 @@ body {
 }
 
 a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Наследуем цвет текста */
+    text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
-    text-decoration: none; /* Убираем подчеркивание при наведении */
+    text-decoration: none;
 }
 
 a:active {
-    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+    color: inherit;
 }
 .container {
     max-width: 1200px;

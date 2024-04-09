@@ -1,0 +1,4 @@
+<form action="{% url 'comment_delete' comment_id %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Удалить">
+</form>

@@ -37,8 +37,8 @@ h1 {
     margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-height: 200px; /* Максимальная высота контейнера для прокрутки */
-    overflow: auto; /* Добавляем прокрутку */
+    max-height: 200px;
+    overflow: auto;
 }
 
 h2 {
@@ -62,7 +62,7 @@ li:last-child {
 }
 
 .button-back {
-    background-color: #4CAF50; /* Зеленый */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -77,5 +77,5 @@ li:last-child {
 }
 
 .button-back:hover {
-    background-color: #45a049; /* Темно-зеленый */
+    background-color: #45a049;
 }

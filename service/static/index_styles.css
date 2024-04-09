@@ -21,16 +21,16 @@
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Увеличиваем ширину карточки */
+    width: 250px;
     margin: 20px;
     display: inline-block; 
 }
 
 .author-card img {
-    width: 150px; /* Устанавливаем ширину фотографии */
-    height: 150px; /* Устанавливаем высоту фотографии */
-    object-fit: cover; /* Устанавливаем свойство, чтобы фотография полностью заполняла заданные размеры */
-    border-radius: 50%; /* Добавляем скругление углов, чтобы получить круглое изображение */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .author-name {
@@ -84,19 +84,19 @@ td {
 }
 
 .genre-table {
-    width: 15%; /* Устанавливаем ширину таблицы */
-    margin-left: 10px; /* Отступ слева от карточек авторов */
+    width: 15%;
+    margin-left: 10px;
 }
 
 a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Наследуем цвет текста */
+    text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
-    text-decoration: none; /* Убираем подчеркивание при наведении */
+    text-decoration: none;
 }
 
 a:active {
-    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+    color: inherit;
 }

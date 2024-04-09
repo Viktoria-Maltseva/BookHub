@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 from django.shortcuts import redirect
-from django.shortcuts import redirect
 from django.urls import reverse
 from books.models import Author, Genre
 from django.shortcuts import get_object_or_404
