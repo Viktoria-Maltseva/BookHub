@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 from django.urls import reverse_lazy
-import dotenv  # Импортируем environ 
+import dotenv
 
 dotenv.load_dotenv()
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'service',
     'books',
     'account',
+    'comments',
 ]
 
 MIDDLEWARE = [

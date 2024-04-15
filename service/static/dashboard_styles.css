@@ -17,16 +17,29 @@
     margin-right: 10px;
 }
 a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Наследуем цвет текста */
+    text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
-    text-decoration: none; /* Убираем подчеркивание при наведении */
+    text-decoration: none;
 }
 
 a:active {
-    color: inherit; /* Устанавливаем цвет текста при активации ссылки */
+    color: inherit;
 }
 
+.search-input {
+    width: 1000px;
+    height: 30px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    padding: 0 10px;
+    outline: none;
+}
 
+.search-input:focus {
+    border-color: #1f00d0;
+}

@@ -16,6 +16,10 @@
                     <li>
                         <h3>{{ comment.title }}</h3>
                         <p>{{comment.body}}</p>
+                        <h4>Автор отзыва: {{ comment.user.username }}</h4>
+                        {% if user == comment.user %}
+                        <a href="{% url 'comment_update' comment.id %}" style="color: rgb(0, 32, 160); font-style: italic;">Редактировать отзыв</a>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>

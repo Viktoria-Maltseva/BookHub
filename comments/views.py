@@ -3,7 +3,6 @@ from django.views import View
 from .forms import CommentForm
 from books.models import Book
 from django.shortcuts import redirect
-from django.urls import reverse
 from django.contrib import messages
 from account.models import Comments
 
@@ -18,14 +17,14 @@ class CommentFormCreateView(View):
     def post(self, request, *args, **kwargs):
         form = CommentForm(request.POST)
         if form.is_valid():
-            book_id = self.kwargs.get('book_id')  # Получаем book_id из URL
+            book_id = self.kwargs.get('book_id')
             user_id = request.user.id
             if Comments.objects.filter(book_id=book_id, user_id=user_id).exists():
-                messages.error(request, 'Вы уже оставили отзыв для этой книги')
+                messages.error(request, 'Вы уже оставили отзыв для этой книги. Вы можете редактировать свой комментарий выше, в своем профиле или удалить его в своем профиле.')
                 return redirect('show_book', id=book_id)
-            book = Book.objects.get(id=book_id)  # Получаем объект книги
+            book = Book.objects.get(id=book_id)
             comment = form.save(commit=False)
-            comment.book = book  # Связываем комментарий с книгой
+            comment.book = book
             comment.user_id = user_id
             comment.save()
             return redirect('show_book', id=book_id)

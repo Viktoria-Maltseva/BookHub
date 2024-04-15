@@ -4,7 +4,13 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-    <h1>Добро пожаловать в профиль, {{ request.user.username }}</h1>
+    <h1>Добро пожаловать в профиль, {{ request.user.first_name }} {{ request.user.last_name }}!</h1>
+    {% if not comments %}
+    <p>Вы еще не оставляли отзывы. Чтобы оставить отзыв, найдите произведение, о котором хотели бы поделиться своими впечатлениями.</p>
+    {% endif %}
+    <form action="/books" method="get"> 
+        <input type="search" class="search-input" placeholder="Например, капитанская дочка" required name="term">
+    </form>
     {% for comment in comments %}
         <div class="comment">
             <h2>{{ comment.title }}</h2>

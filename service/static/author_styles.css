@@ -1,35 +1,33 @@
-/* author_styles.css */
-
 .container {
-    max-width: 800px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование контейнера на странице */
-    padding: 20px; /* Поля вокруг контейнера */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .author-info {
-    margin-bottom: 20px; /* Отступ между информацией об авторе и его произведениями */
+    margin-bottom: 20px;
 }
 
 .author-name {
-    font-size: 24px; /* Размер имени автора */
-    font-weight: bold; /* Жирное начертание имени автора */
-    margin-bottom: 10px; /* Отступ после имени автора */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .book-list {
-    list-style-type: none; /* Убираем маркеры у списка произведений */
-    padding: 0; /* Убираем отступы вокруг списка произведений */
+    list-style-type: none;
+    padding: 0;
 }
 
 .book-list li {
-    margin-bottom: 5px; /* Отступ между произведениями */
+    margin-bottom: 5px;
 }
 
 .book-list li a {
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
-    color: #007bff; /* Цвет ссылок */
+    text-decoration: none;
+    color: #007bff;
 }
 
 .book-list li a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении на ссылку */
+    text-decoration: underline;
 }

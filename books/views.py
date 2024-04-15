@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.views import View
-from books.models import Genre, Author, Book
+from books.models import Book
 from django.views.decorators.http import require_http_methods
 from django.shortcuts import render
 from django.db.models import Q

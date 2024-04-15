@@ -14,10 +14,10 @@
           <a href="{% url 'dashboard' %}">Перейти в профиль: {{ request.user.first_name }}</a>
           <form method="post" action="{% url 'logout' %}">
               {% csrf_token %}
-              <button type="submit">Logout</button>
+              <button type="submit" class="login-btn">Logout</button>
           </form>
       {% else %}
-          <a href="{% url 'login' %}">Log-in</a>
+          <a href="{% url 'login' %}" class="login-btn">Log-in</a>
       {% endif %}
   </span>
   </div>
