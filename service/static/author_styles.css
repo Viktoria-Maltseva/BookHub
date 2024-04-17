@@ -2,16 +2,33 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.author-info {
+.genre-title {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.author-name {
+.genre-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.genre-name {
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 10px;
+}
+
+.genre-description {
+    line-height: 1.6;
+}
+
+.books-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .book-list {
@@ -19,15 +36,28 @@
     padding: 0;
 }
 
-.book-list li {
-    margin-bottom: 5px;
+.book-item {
+    margin-bottom: 10px;
 }
 
-.book-list li a {
-    text-decoration: none;
+.book-link {
     color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.book-list li a:hover {
+.book-link:hover {
     text-decoration: underline;
+}
+.author-photo {
+    max-width: 200px;
+    border-radius: 10%;
+    margin-bottom: 20px;
+    float: left;
+    margin-right: 20px; 
+    display: inline-block;
+}
+
+.author-info {
+    text-align: justify; /* Ровное обтекание текста */
 }

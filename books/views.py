@@ -11,6 +11,10 @@ class BookView(View):
     def get(self, request, *args, **kwargs):
         book = get_object_or_404(Book, id=kwargs['id'])
         comments = Comments.objects.filter(book=kwargs['id'])
+        if request.user.is_authenticated:
+            current_user_comment = comments.filter(user=request.user).first()
+            if current_user_comment:
+                comments = [current_user_comment] + list(comments.exclude(id=current_user_comment.id))
         return render(request, 'books/book.html', context={'book': book, 'comments': comments})
 
 @require_http_methods(['GET', 'POST'])

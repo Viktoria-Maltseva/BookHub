@@ -2,19 +2,19 @@
 {% extends "base.html" %} 
 {% block content %} 
 <div class="container">
-    <h1>Информация об авторе</h1>
+    <h1 class="author-title">Информация об авторе</h1>
     <div class="author-info">
-        <p class="author-name">{{author.name}}</p>
-        <p>{{author.body}}</p>
+        <h3 class="author-name">{{author.name}}</h3>
+        <img src="{{ author.photo }}" alt="{{ author.name }}" class="author-photo">
+        <p class="author-description">{{author.body}}</p>
     </div>
     {% if author.book_set.all %}
-    <h2>Произведения</h2>
+    <h2 class="books-heading">Произведения</h2>
     <ul class="book-list">
-        {% for i in author.book_set.all %}
-        <li><a href="{% url 'show_book' i.id %}">{{i.name}}</a></li>
+        {% for book in author.book_set.all %}
+        <li class="book-item"><a href="{% url 'show_book' book.id %}" class="book-link">{{book.name}}</a></li>
         {% endfor %}
     </ul>
     {% endif %}
 </div>
-{% endblock %} 
-
+{% endblock %}

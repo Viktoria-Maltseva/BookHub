@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Comments(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=255)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)

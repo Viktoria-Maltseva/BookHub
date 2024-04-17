@@ -2,19 +2,18 @@
 {% extends "base.html" %} 
 {% block content %} 
 <div class="container">
-    <h1>Информация о жанрах</h1>
-    <div class="author-info">
-        <p class="author-name">{{genre.genre}}</p>
-        <p>{{genre.body}}</p>
+    <h1 class="genre-title">Информация о жанрах</h1>
+    <div class="genre-info">
+        <p class="genre-name">{{genre.genre}}</p>
+        <p class="genre-description">{{genre.body}}</p>
     </div>
     {% if genre.book_set.all %}
-    <h2>Произведения</h2>
+    <h2 class="books-heading">Произведения</h2>
     <ul class="book-list">
-        {% for i in genre.book_set.all %}
-        <li><a href="{% url 'show_book' i.id %}">{{i.name}}</a></li>
+        {% for book in genre.book_set.all %}
+        <li class="book-item"><a href="{% url 'show_book' book.id %}" class="book-link">{{book.name}}</a></li>
         {% endfor %}
     </ul>
     {% endif %}
 </div>
-{% endblock %} 
-
+{% endblock %}
