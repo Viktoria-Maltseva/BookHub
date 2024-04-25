@@ -1,11 +1,32 @@
-<link rel="stylesheet" href="../static/sign_in_up_style.css" />
-{% extends "base.html" %}
-{% block content %}
-    <h1>Log-in</h1>
-    <p>Please, use the following form to log-in. If you don't have an account <a href="{% url 'register' %}">register here</a></p>
-    <form action="." method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <p><input type="submit" value="Log-in"></p>
-    </form>
-{% endblock %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/static/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Страница входа</title>
+</head>
+<body>
+    <div class='container' id="main">
+        <div class='signup'>
+          <h1>Вход</h1>
+            {% if form.errors %}
+            <p>
+                Ваш никнейм или пароль не подходят.
+                Попробуйте еще раз.
+            </p>
+        {% endif %}
+        <form action="." method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button type="submit">Войти</button>
+        </form>
+        <p class="footer-p">Нет профиля?</p>
+        <a href="{% url 'register' %}"><p class="link-p">Зарегистрироваться</p></a>
+        <a href="/"><p class="link-p">	&larr; Вернуться на главную</p></a>
+        </div>
+      </div> 
+</body>
+</html>

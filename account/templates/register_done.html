@@ -1,5 +1,11 @@
+<link rel="stylesheet" href="/static/register_done.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 {% extends "base.html" %}
 {% block content %}
-    <h1>Добро пожаловать, {{ new_user.first_name }}!</h1>
-    <p>Your account has been successfully created. Now you can <a href="{% url 'login' %}">log in</a>.</p>
+<div class="welcome">
+    <h1>Добро пожаловать, {{ new_user.first_name }} {{ new_user.last_name }}!</h1>
+    <p>Ваш аккаунт создан успешно. Теперь вы можете <a href="{% url 'login' %}">войти</a>.</p>
+</div>
 {% endblock %}

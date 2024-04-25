@@ -1,0 +1,31 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Jost, sans-serif;
+    flex-direction: column;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color:#1941D1;
+}
+
+.welcome p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.welcome a {
+    font-size: 24px;
+    font-weight: 400;
+    color:#4d67c3;
+    text-decoration: none;
+}
+
+.welcome a:hover {
+    color:#232f3e;
+}

@@ -1,11 +1,27 @@
-<link rel="stylesheet" href="/static/register_styles.css"> 
-{% extends "base.html" %}
-{% block content %}
-    <h1>Create an account</h1>
-    <p>Please, sign up using the following form:</p>
-    <form action="." method="post">
-        {{ user_form.as_p }}
-        {% csrf_token %}
-        <p><input type="submit" value="Create my account"></p>
-    </form>
-{% endblock %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="/static/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Регистрация</title>
+</head>
+<body>
+    <div class='container' id="main">
+        <div class='signup'>
+        <h1>Регистрация</h1>
+        <form action="." method="post">
+            {{ user_form.as_p }}
+            {% csrf_token %}
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p class="footer-p">Уже есть аккаунт?</p>
+        <a href="{% url 'login' %}"><p class="link-p">Войти</p></a>
+        <a href="/"><p class="link-p">&larr; Вернуться на главную</p></a>
+        </div>
+      </div>    
+</body>
+</html>
+
