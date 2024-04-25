@@ -28,8 +28,6 @@ urlpatterns = [
     path('books/', include('books.urls')),
     path('authors/<int:author_id>/', views.author_show, name='author_show'),
     path('<int:genre_id>/', views.show_info_genres, name='genre_show'),
-    path('sign-in/', views.sign_in),
-    path('sign-up/', views.sign_up),
     path('accounts/', include('django.contrib.auth.urls')),
     path('comments/', include('comments.urls')),
 ]

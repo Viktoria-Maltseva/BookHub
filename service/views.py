@@ -21,11 +21,3 @@ def show_info_genres(request, genre_id):
 def author_show(request, author_id):
     author_info = get_object_or_404(Author, id=author_id)
     return render(request, 'author.html', {'author': author_info})
-
-@require_http_methods(['GET', 'POST'])
-def sign_in(request):
-    return render(request, 'sign_in.html')
-
-@require_http_methods(['GET', 'POST'])
-def sign_up(request):
-    return render(request, 'sign_up.html')
