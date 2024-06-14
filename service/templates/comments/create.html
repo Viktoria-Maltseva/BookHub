@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="/static/form_styles.css">
-<form action="{% url 'comment_create' book_id %}" method="post">
+<h1>"{{ book.name }}", {{ book.author.name }}</h1>
+<form action="{% url 'comment_create' %}" method="post" class="comment-form">
     {% csrf_token %}
-    <table border="1">
-    {{ form }}
-    </table>
-    <input type="submit" value="Опубликовать отзыв">
+    <div class="form-table">
+        {{ form.as_p }}
+    </div>
+    <input type="hidden" name="book_id" value="{{ book_id }}">
+    <button type="submit" class="submit-button">Оставить отзыв</button>
 </form>

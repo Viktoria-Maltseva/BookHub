@@ -12,12 +12,13 @@
     <span class="user">
       {% if request.user.is_authenticated %}
           <a href="{% url 'dashboard' %}">Перейти в профиль: {{ request.user.first_name }}</a>
+          <p></p>
           <form method="post" action="{% url 'logout' %}">
               {% csrf_token %}
-              <button type="submit" class="login-btn">Logout</button>
+              <button type="submit" class="login-btn">Выйти из профиля</button>
           </form>
       {% else %}
-          <a href="{% url 'login' %}" class="login-btn">Log-in</a>
+          <a href="{% url 'login' %}" class="login-btn">Вход</a>
       {% endif %}
   </span>
   </div>

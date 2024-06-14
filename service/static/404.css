@@ -1,0 +1,62 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+    text-align: center;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Описание */
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Кнопка */
+.home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #74ebd5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: #acb6e5;
+}
+
+.home-button:active {
+    transform: scale(0.95);
+}

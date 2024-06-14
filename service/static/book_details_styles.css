@@ -16,7 +16,12 @@
 }
 
 .book-info {
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0.5% auto 0; /* Adjusted for fixed header */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .book-title {
@@ -33,7 +38,7 @@
 }
 
 .comments-section {
-    margin-bottom: 30px;
+    margin-bottom: 30%;
 }
 
 .comments-heading {
@@ -42,9 +47,13 @@
 }
 
 .comment-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
+    border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
 }
 
 .comment-title {
@@ -62,16 +71,21 @@
 
 .comment-actions {
     margin-top: 10px;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
 .comment-card {
     border: 1px solid #ccc;
     padding: 15px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+            
 }
 
 .comment-card.own-comment {
-    border-color: #007bff;
+    border-color: #6ab2ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, #6ab2ff);
 }
 
 .edit-link {
@@ -81,13 +95,14 @@
 }
 
 .leave-review-btn {
-    background-color: #87CEEB;
+    background-color: #7bf9ba;
     color: #fff;
     border: none;
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .login-prompt {

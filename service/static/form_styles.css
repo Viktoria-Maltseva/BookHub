@@ -1,83 +1,81 @@
+/* Основные стили для страницы */
 body {
-    background: linear-gradient(to right , #d1ebff,rgb(147, 198, 255));
-}
-
-form {
-    background-color: #fff;
-    padding: 20px;
-    margin: 0 auto;
-    width: 50%;
-    font-family: Jost, sans-serif;
-}
-
-.headline{
-    font-family: Jost,sans-serif;
-    font-size: 32;
-    text-align: center;
-    font-weight: 200;
-    color: #fff;
-    padding-top: 10px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td {
-    padding: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    font-family: Jost, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-input[type="submit"] {
-    background-color:#0080ff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px; 
-    font-family: Jost, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-input[type="submit"]:hover {
-    transform: scale(1.1); 
-}
-
-.link_main {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 300;
-    color:#fff;
-    font-family: Jost, sans-serif;
-    text-align: center;
-}
-
-.settings-ul ul{
-    font-size: 16px;
-    font-weight: 300;
-    color:#fff;
-    font-family: Jost, sans-serif;
-    text-align: center;
-    list-style-type: none;
-}
-
-ul li {
-    text-align: center;
-    list-style-type: none;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
     padding: 0;
+    color: #333;
+}
+
+/* Заголовок книги */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Стили для формы */
+.comment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.form-table p {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-table label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-table input, .form-table textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-table input:focus, .form-table textarea:focus {
+    border-color: #1f00d0;
+}
+
+/* Специальные стили для textarea */
+.form-table textarea {
+    height: 150px; /* Увеличенная высота для textarea */
+    resize: vertical; /* Разрешение изменения высоты пользователем */
+}
+
+/* Стили для кнопки */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #52a6ff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
 }

@@ -14,11 +14,11 @@
             </div>
         {% endfor %}
     </div>
-    <div class="genre-table">
+    <div class="rounded">
         <table> 
             {% for i in genres%}
             <tr> 
-                <td class="color1" style="width: 10px; height: 20px;"><a href="{% url 'genre_show' i.id %}">{{i.genre}}</a></td> 
+                <td><a href="{% url 'genre_show' i.id %}">{{i.genre}}</a></td> 
             </tr> 
             {% endfor %}
         </table>

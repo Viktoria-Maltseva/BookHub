@@ -8,14 +8,19 @@ from account.models import Comments
 
 # Create your views here.
 class BookView(View):
-    def get(self, request, *args, **kwargs):
-        book = get_object_or_404(Book, id=kwargs['id'])
-        comments = Comments.objects.filter(book=kwargs['id'])
-        if request.user.is_authenticated:
-            current_user_comment = comments.filter(user=request.user).first()
-            if current_user_comment:
-                comments = [current_user_comment] + list(comments.exclude(id=current_user_comment.id))
-        return render(request, 'books/book.html', context={'book': book, 'comments': comments})
+    def get(self, request, *args, **kwargs): 
+        if Book.objects.filter(id=kwargs['book_id']):
+            book = Book.objects.get(id=kwargs['book_id'])
+            comments = Comments.objects.filter(book=kwargs['book_id'])
+            if request.user.is_authenticated:
+                current_user_comment = comments.filter(user=request.user).first()
+                if current_user_comment:
+                    comments = [current_user_comment] + list(comments.exclude(id=current_user_comment.id))
+                    request.session['comment_id'] = current_user_comment.id
+            request.session['book_id'] = kwargs.pop('book_id')
+            return render(request, 'books/book.html', context={'book': book, 'comments': comments})
+        else:
+            return render(request, '404.html')
 
 @require_http_methods(['GET', 'POST'])
 def search_redirect(request):
@@ -25,3 +30,8 @@ def search_redirect(request):
         return render(request, 'search_results.html', {'books': books, 'query': query})
     else:
         return render(request, 'search_results.html', {'query': query})
+    
+
+@require_http_methods(['GET', 'POST'])
+def notbook(request, book_not):
+    return render(request, '404.html')

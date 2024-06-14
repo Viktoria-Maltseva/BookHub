@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to right , #6f00ff,#8c34ff);
+    background: linear-gradient(to right , #ebeeee,#daedf5);
     font-family: "Jost";
     min-height: 100%;
     margin: 10%;
@@ -72,19 +72,19 @@ input {
 }
 
 a {
-    color: #9400f7;
+    color: #87CEEB;
     text-decoration: none;
 }
 
 button {
     color: #ffffff;
-    background: #8e04ff;
+    background: #87CEEB;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 55px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #8e04ff;
+    border: 1px solid #87CEEB;
     outline: none;
     letter-spacing: 1px;
     text-transform: uppercase;

@@ -19,7 +19,7 @@
                     <h4 class="comment-author">Автор отзыва: <span class="author-username">{{ comment.user.username }}</span></h4>
                     {% if user == comment.user %}
                     <div class="comment-actions">
-                        <a href="{% url 'comment_update' comment.id %}" class="edit-link">Редактировать отзыв</a>
+                        <a href="{% url 'comment_update'%}" class="edit-link">Редактировать отзыв</a>
                     </div>
                     {% endif %}
                 </div>
@@ -27,7 +27,7 @@
         </div>
         
         {% if user.is_authenticated %}
-        <a href="{% url 'comment_create' book.id %}" class="leave-review-btn">Оставить отзыв</a>
+        <a href="{% url 'comment_create' %}" class="leave-review-btn">Оставить отзыв</a>
         {% else %}
             <p class="login-prompt">Вы можете оставить отзыв, если <a href="{% url 'login' %}" class="login-link">авторизуетесь</a>.</p>
         {% endif %}

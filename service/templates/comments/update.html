@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/static/form_styles.css">
 {% if form.errors %}
-    <div>
+    <div class="error-messages">
         <ul>
         {% for error in form.errors %}
             <li><strong>{{ error|escape }}</strong></li>
@@ -9,10 +9,13 @@
     </div>
 {% endif %}
 
-<form action="{% url 'comment_update' comment_id %}" method="post">
+<h1>"{{ book.name }}", {{ book.author.name }}</h1>
+<form action="{% url 'comment_update' %}" method="post" class="comment-form">
     {% csrf_token %}
-    <table border="1">
-    {{ form }}
-    </table>
-    <input type="submit" value="Сохранить">
+    <div class="form-table">
+        {{ form.as_p }}
+    </div>
+    
+    <input type="hidden" name="comment_id" value="{{ comment_id }}">
+    <button type="submit" class="submit-button">Сохранить</button>
 </form>
